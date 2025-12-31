@@ -6,9 +6,9 @@
 
 #include <stdint.h>
 
-#define STR1(x) #x
+#define STR1(x) #x //SAVVINA comment: converts x to string (STR(10) -> "10")
 #define STR(x) STR1(x)
-#define EXTRACT(a, size, offset) (((~(~0 << size) << offset) & a) >> offset)
+#define EXTRACT(a, size, offset) (((~(~0 << size) << offset) & a) >> offset) // extracts field of bit size "size" and of position "offset" from a 
 
 #define CUSTOMX_OPCODE(x) CUSTOM_ ## x
 #define CUSTOM_0 0b0001011
@@ -16,6 +16,7 @@
 #define CUSTOM_2 0b1011011
 #define CUSTOM_3 0b1111011
 
+// 32-bit instruction that can be used in an assembly program
 #define CUSTOMX(X, xd, xs1, xs2, rd, rs1, rs2, funct) \
   CUSTOMX_OPCODE(X)                     |             \
   (rd                 << (7))           |             \
@@ -47,6 +48,7 @@
 
 // rd, rs1, and rs2 are data
 // rd_n, rs_1, and rs2_n are the register numbers to use
+// rd_, rs1_, rs2_ are corresponding x registers, initialised to rd, rs1, rs2 values
 #define ROCC_INSTRUCTION_R_R_R(X, rd, rs1, rs2, funct, rd_n, rs1_n, rs2_n) { \
     register uint64_t rd_  asm ("x" # rd_n);                                 \
     register uint64_t rs1_ asm ("x" # rs1_n) = (uint64_t) rs1;               \

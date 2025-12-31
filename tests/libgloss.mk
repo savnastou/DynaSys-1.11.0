@@ -1,8 +1,11 @@
-# Handle libgloss-htif dependency
 ifndef libgloss
 
 ifndef GCC
 $(error GCC is not defined)
+endif
+
+ifndef CXX
+$(error CXX is not defined)
 endif
 
 ifndef TARGET
@@ -49,6 +52,7 @@ libgloss :=  # No additional prerequisites
 endif
 
 CFLAGS += -specs=$(libgloss_specs)
+CXXFLAGS += -specs=$(libgloss_specs)
 LDFLAGS += -specs=$(libgloss_specs)
 
 endif # libgloss

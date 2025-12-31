@@ -44,6 +44,774 @@ ifeq ($(SUB_PROJECT),vcu118)
 	FPGA_BRAND        ?= xilinx
 endif
 
+# // INITIAL
+# // bring rqt buffer back
+ifeq ($(SUB_PROJECT),listpref6alb256corrmednobwslowcomplete39initialrqtnoswaitexactlysamenol2finalrevert)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref6ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitExactlySameNoL2FinalRocketZCU106ConfigREVERT
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+ifeq ($(SUB_PROJECT),listpref6alb256corrmednobwslowcomplete39initialrqtnoswaitdisableprefexactlysamenol2finalrevert)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref6ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitDISABLEPREFExactlySameNoL2FinalRocketZCU106ConfigREVERT
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+ifeq ($(SUB_PROJECT),listpref7alb256corrmednobwslowcomplete39initialrqtnoswaitrptlookuponlyexactlysamenol2final)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTLOOKUPONLYExactlySameNoL2FinalRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+ifeq ($(SUB_PROJECT),listpref7alb256corrmednobwslowcomplete39initialrqtnoswaitrptdisableredundchecksexactlysamenol2final)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTDISABLEREDUNDCHECKSExactlySameNoL2FinalRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+ifeq ($(SUB_PROJECT),listpref7alb256corrmednobwslowcomplete39exactlysamenol2final)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB256CorrectMedNoBwslowdownComplete39ExactlySameNoL2FinalRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+ifeq ($(SUB_PROJECT),listpref7alb256corrmednobwslowcomplete39initialrqtnoswaitrpt8xsystembusexactlysamenol2final)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPT8xSYSTEMBUSExactlySameNoL2FinalRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+ifeq ($(SUB_PROJECT),listpref7alb256corrmednobwslowcomplete39initialrqtnoswaitrptclosetoslowexactlysamenol2final)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTCLOSERTOSLOWExactlySameNoL2FinalRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# ------------------------------------------------------------------------------------------------------------------------------------------
+
+# Cores only ---------------------------------------------------------------------------------------------------------------------------
+
+# Small -----------------------------------------------
+
+ifeq ($(SUB_PROJECT),corrmednobwslowdown1way1dtlb1mshrexactsamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= CorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# Medium  -----------------------------------------------
+
+ifeq ($(SUB_PROJECT),corrmednobwslowdownfinalexactsamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= CorrectMedNoBwslowdownFinalExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# Big    -----------------------------------------------
+
+ifeq ($(SUB_PROJECT),corrmednobwslowdown8way16dtlb16mshrexactsamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= CorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# Big    -----------------------------------------------
+# Perf Counters
+ifeq ($(SUB_PROJECT),corrmednobwslowdown8way16dtlb16mshrexactsamenol2perf)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= CorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2PERFRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# List Prefetcher + Cores ----------------------------------------------------------------------------------------------------------------
+
+# Small -----------------------------------------------
+
+# 256 tagIDs
+ifeq ($(SUB_PROJECT),listpref7alb256initialrqtnoswaitrptcorrmednobwslow1way1dtlb1mshrexactlysamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT),listpref8alb256initialrqtnoswaitrptcorrmednobwslow1way1dtlb1mshrexactlysamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 512
+ifeq ($(SUB_PROJECT),listpref8alb5122048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslow1way1dtlbset1mshrnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 256
+ifeq ($(SUB_PROJECT),listpref8alb2562048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslow1way1dtlbset1mshrnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+#-----------------With L2
+
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT),listpref8alb256initialrqtnoswaitrptcorrmednobwslow1way1dtlb1mshrexactlysamewithl2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameWithL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 512
+ifeq ($(SUB_PROJECT),listpref8alb5122048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslow1way1dtlbset1mshrwithl2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRWithL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 256
+ifeq ($(SUB_PROJECT),listpref8alb2562048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslow1way1dtlbset1mshrwithl2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRWithL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+#-----------------No RQT
+
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT),listpref8alb256initialnorqtnoswaitrptcorrmednobwslow1way1dtlb1mshrexactlysamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256InitialNoRqtNoswaitRPTCorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 512
+ifeq ($(SUB_PROJECT),listpref8alb5122048x11cyclerdlatencynoreninitialnorqtnoswaitrptexactsamecorrmednobwslow1way1dtlbset1mshrnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB5122048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 256
+ifeq ($(SUB_PROJECT),listpref8alb2562048x11cyclerdlatencynoreninitialnorqtnoswaitrptexactsamecorrmednobwslow1way1dtlbset1mshrnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB2562048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# Medium  -----------------------------------------------
+
+# 256 tagIDs
+# Granul 7
+ifeq ($(SUB_PROJECT),listpref7alb256corrmednobwslowcomplete39initialrqtnoswaitrptexactlysamenol2final)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTExactlySameNoL2FinalRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+#CORRECTED VERSION
+# Granul 7
+ifeq ($(SUB_PROJECT),listpref7alb256mapupdateinitialrqtnoswaitrptexactlysamecorrmednobwslownol2final)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB256MAPUPDATEInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+#CORRECTED VERSION
+# Granul 6
+ifeq ($(SUB_PROJECT),listpref6alb256mapupdateinitialrqtnoswaitrptexactlysamecorrmednobwslownol2final)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref6ALB256MAPUPDATEInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT),listpref8alb256corrmednobwslowcomplete39initialrqtnoswaitrptexactlysamenol2final)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTExactlySameNoL2FinalRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 7
+ifeq ($(SUB_PROJECT),listpref7alb5122048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslowfinalnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 512
+ifeq ($(SUB_PROJECT),listpref8alb5122048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslowfinalnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 256 
+ifeq ($(SUB_PROJECT),listpref8alb2562048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslowfinalnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+#-----------------With L2
+
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT), listpref8alb256initialrqtnoswaitrptcorrmednobwslowfinalexactlysamewithl2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTExactlySameWithL2FinalRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 512
+ifeq ($(SUB_PROJECT),listpref8alb5122048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslowfinalwithl2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalWithL2RocketZCU106Config 
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 256
+ifeq ($(SUB_PROJECT),listpref8alb2562048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslowfinalwithl2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalWithL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+#-----------------No RQT
+
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT),listpref8alb256initialnorqtnoswaitrptcorrmednobwslowfinalexactlysamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256InitialNoRqtNoswaitRPTCorrectMedNoBwslowdownFinalExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 512
+ifeq ($(SUB_PROJECT),listpref8alb5122048x11cyclerdlatencynoreninitialnorqtnoswaitrptexactsamecorrmednobwslowfinalnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB5122048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 256
+ifeq ($(SUB_PROJECT),listpref8alb2562048x11cyclerdlatencynoreninitialnorqtnoswaitrptexactsamecorrmednobwslowfinalnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB2562048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# Big    -----------------------------------------------
+
+# 256 tagIDs
+ifeq ($(SUB_PROJECT),listpref7alb256initialrqtnoswaitrptcorrmednobwslow8way16dtlb16mshrexactlysamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref7ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT),listpref8alb256initialrqtnoswaitrptcorrmednobwslow8way16dtlb16mshrexactlysamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# PERF COUNTERS
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT),listpref8alb256initialrqtnoswaitrptcorrmednobwslow8way16dtlb16mshrexactlysamenol2perf)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2PERFRocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 512
+ifeq ($(SUB_PROJECT),listpref8alb5122048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslow8way16dtlbset16mshrnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 256
+ifeq ($(SUB_PROJECT),listpref8alb2562048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslow8way16dtlbset16mshrnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+#-----------------With L2
+
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT),listpref8alb256initialrqtnoswaitrptcorrmednobwslow8way16dtlbsets16mshrsexactlysamewithl2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameWithL2RocketZCU106Config
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 512
+ifeq ($(SUB_PROJECT),listpref8alb5122048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslow8way16dtlbsets16mshrswithl2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRWithL2RocketZCU106Config 
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 256
+ifeq ($(SUB_PROJECT),listpref8alb2562048x11cyclerdlatencynoreninitialrqtnoswaitrptexactsamecorrmednobwslow8way16dtlbsets16mshrswithl2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRWithL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+#-----------------No RQT
+
+# 256 tagIDs
+# Granul 8
+ifeq ($(SUB_PROJECT),listpref8alb256initialnorqtnoswaitrptcorrmednobwslow8way16dtlb16mshrexactlysamenol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB256InitialNoRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRsExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 512
+ifeq ($(SUB_PROJECT),listpref8alb5122048x11cyclerdlatencynoreninitialnorqtnoswaitrptexactsamecorrmednobwslow8way16dtlbset16mshrnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB5122048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRsNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# 2048 tagIDs
+# Granul 8
+# ALB 256
+ifeq ($(SUB_PROJECT),listpref8alb2562048x11cyclerdlatencynoreninitialnorqtnoswaitrptexactsamecorrmednobwslow8way16dtlbset16mshrnol2)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= ListPref8ALB2562048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRsNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# Only MetaSys Intruction Implementation Module + Cores ----------------------------------------------------------------------------------------------------------
+
+# Medium -----------------------------------------------
+# 2048 tagIDs
+ifeq ($(SUB_PROJECT),atomaddressmapcontr2048x11cyclerdlatencynorencorrmednobwslowfinalexactsamenol2zcu106)
+	SBT_PROJECT       ?= fpga_platforms
+	MODEL             ?= ZCU106FPGATestHarness
+	VLOG_MODEL        ?= ZCU106FPGATestHarness
+	MODEL_PACKAGE     ?= chipyard.fpga.zcu106
+	CONFIG            ?= AtomAddressMapController2048X11CycleRDLatencyNorenCorrectMedNoBwslowdownFinalExactlySameNoL2RocketZCU106Config
+	CONFIG_PACKAGE    ?= chipyard.fpga.zcu106
+	GENERATOR_PACKAGE ?= chipyard
+	TB                ?= none # unused
+	TOP               ?= ChipTop
+	BOARD             ?= zcu106
+	FPGA_BRAND        ?= xilinx
+endif
+
+# ------------------------------------------------------------------------------------------------------------------------------------------
+
 ifeq ($(SUB_PROJECT),bringup)
 	SBT_PROJECT       ?= fpga_platforms
 	MODEL             ?= BringupVCU118FPGATestHarness
@@ -150,7 +918,10 @@ $(synth_list_f): $(sim_common_files) $(all_vsrcs)
 
 BIT_FILE := $(build_dir)/obj/$(MODEL).bit
 $(BIT_FILE): $(synth_list_f)
-	cd $(build_dir); vivado \
+	cd $(build_dir);# ulimit \
+		# -m 8388608 \
+		# -v 8388608 &&\
+		vivado \
 		-nojournal -mode batch \
 		-source $(fpga_common_script_dir)/vivado.tcl \
 		-tclargs \

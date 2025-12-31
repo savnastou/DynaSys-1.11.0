@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 #ifndef MARCHID_H
 #define MARCHID_H
 

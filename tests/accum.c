@@ -1,4 +1,5 @@
 #include "rocc.h"
+#include <stdio.h>
 
 static inline void accum_write(int idx, unsigned long data)
 {
@@ -34,14 +35,20 @@ int main(void)
 	result = accum_read(0);
 
 	if (result != data + 2)
+	{
+		printf("1\n");
 		return 1;
-
+	}
 	accum_write(0, 3);
 	accum_add(0, 1);
 	result = accum_read(0);
 
 	if (result != 4)
+	{
+		printf("2\n");
 		return 2;
+	}
 
+	printf("0\n");
 	return 0;
 }

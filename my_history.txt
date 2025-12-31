@@ -1,0 +1,1000 @@
+ 1002  make
+ 1003  cd ../benchmarks/bfs
+ 1004  make
+ 1005  make clean
+ 1006  make
+ 1007  make clean
+ 1008  make
+ 1009  cd ../../../
+ 1010  make
+ 1011  cd ../../../../
+ 1012  cd ../
+ 1013  ls
+ 1014  cd ZCU106_PORT/fpga/fpga-shells/src/main/scala/devices/xilinx/
+ 1015  ls
+ 1016  cp xilinxzcu106mig ../../../../../../../../SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/devices/xilinx/.
+ 1017  cp -r xilinxzcu106mig ../../../../../../../../SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/devices/xilinx/.
+ 1018  cd -r ../../ip/xilinx/zcu106mig ../../../../../../../../SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/ip/xilinx/.
+ 1019  cp -r ../../ip/xilinx/zcu106mig ../../../../../../../../SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/ip/xilinx/.
+ 1020  cd ~/Documents/Chipyard/SavvinaThesis/chipyard
+ 1021  source ./env.sh
+ 1022  clear
+ 1023  cd fpga
+ 1024  make SUB_PROJECT=savvina bitstream 2>&1 | tee build.sav.vcu118.log
+ 1025  cd ../../../../
+ 1026  cd ../
+ 1027  cd sims/verilator
+ 1028  cd ../sims/verilator/
+ 1029  ls
+ 1030  cd generated-src/
+ 1031  ls
+ 1032  cd chipyard.harness.TestHarness.PrefetcherRocketConfig
+ 1033  ls
+ 1034  cd gen-collateral
+ 1035  ls
+ 1036  cd ../../../
+ 1037  ls
+ 1038  clear
+ 1039  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../generators/rocket-chip/emulator/progs/benchmarks/bfs/bfs.e
+ 1040  cd ../../
+ 1041  source ./env.sh
+ 1042  cd sims/verilator/
+ 1043  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../generators/rocket-chip/emulator/progs/benchmarks/bfs/bfs.e
+ 1044  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../generators/rocket-chip/emulator/progs/benchmarks/bfs/bfs.riscv
+ 1045  cd ../../fpga/
+ 1046  make SUB_PROJECT=savzcu106 2&>1 | tee build.sav.zcu106.log
+ 1047  make SUB_PROJECT=savzcu106 
+ 1048  make clean
+ 1049  make SUB_PROJECT=savzcu106 2&>1 | tee build.sav.zcu106.log
+ 1050  make SUB_PROJECT=savzcu106 2&>1 
+ 1051  make SUB_PROJECT=savzcu106 
+ 1052  make SUB_PROJECT=savzcu106 bitstream 2&>1 | tee build.sav.zcu106.log
+ 1053  make SUB_PROJECT=savzcu106 bitstream 
+ 1054  make SUB_PROJECT=vcu118 bitstream 
+ 1055  make SUB_PROJECT=savzcu106 bitstream 2>&1 | tee build.sav.zcu106.log
+ 1056  clear
+ 1057  make SUB_PROJECT=savzcu106 bitstream 2>&1 | tee build.sav.zcu106.log
+ 1058  clear
+ 1059  make SUB_PROJECT=savzcu106 bitstream 2>&1 | tee build.sav.zcu106.log
+ 1060  vivado
+ 1061  source env.sh 
+ 1062  cd fpga/
+ 1063  make SUB_PROJECT=savzcu106 bitstream
+ 1064  btop
+ 1065  cd ~
+ 1066  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1067  source ./env.sh
+ 1068  clear
+ 1069  cd generators/rocket-chip/emulator/progs/benchmarks/dsyr2k
+ 1070  ls
+ 1071  python test_modify_makefiles.py 
+ 1072  python test2.py 
+ 1073  python deepseek_modify.py Makefile Makefile2
+ 1074  python deepseek_modify.py Makefile 
+ 1075  make
+ 1076  make clean
+ 1077  make
+ 1078  python deepseek_modify.py Makefile 
+ 1079  make clean
+ 1080  make
+ 1081  cd ../bfs
+ 1082  python deepseek_modify.py Makefile 
+ 1083  make
+ 1084  python deepseek_modify.py Makefile 
+ 1085  make
+ 1086  cd ../../../../../
+ 1087  cd ../
+ 1088  ../riscv-gnu-toolchain/installed-tools/bin/riscv64-unknown-elf-gcc ./tests/hello.c
+ 1089  cd tests/
+ 1090  make clean
+ 1091  make
+ 1092  make clean
+ 1093  make
+ 1094  make clean
+ 1095  make
+ 1096  make clean
+ 1097  make
+ 1098  make clean
+ 1099  make
+ 1100  make clean
+ 1101  make
+ 1102  make clean
+ 1103  make
+ 1104  make clean
+ 1105  make
+ 1106  make clean
+ 1107  make
+ 1108  make clean
+ 1109  make
+ 1110  make clean
+ 1111  make
+ 1112  make clean
+ 1113  make
+ 1114  make clean
+ 1115  make
+ 1116  make clean
+ 1117  make
+ 1118  cd XMemLib/
+ 1119  make
+ 1120  cd ../
+ 1121  make
+ 1122  exit
+ 1123  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1124  source ./env.sh
+ 1125  cd generators/rocket-chip/emulator/progs/benchmarks/jacobi1d
+ 1126  make
+ 1127  vivado
+ 1128  ls
+ 1129  cd ../../Chipyard/SavvinaThesis/chipyard/fpga/generated-src
+ 1130  ls
+ 1131  cd chipyard.fpga.zcu106.ZCU106FPGATestHarness.SavvinaZCU106Config/ZCU106FPGATestHarness.runs/impl1
+ 1132  cd chipyard.fpga.zcu106.ZCU106FPGATestHarness.SavvinaZCU106Config/ZCU106FPGATestHarness.runs
+ 1133  ls
+ 1134  cd impl_1
+ 1135  ls
+ 1136  cd ~
+ 1137  clear
+ 1138  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1139  cd sims/verilator/
+ 1140  clear
+ 1141  ls
+ 1142  cd generated-src/
+ 1143  ls
+ 1144  rm -rf chipyard.harness.TestHarness.PrefetcherRocketConfig
+ 1145  ls
+ 1146  cd ../
+ 1147  rm simulator-chipyard.harness-PrefetcherRocketConfig
+ 1148  ls
+ 1149  clear
+ 1150  make CONFIG=PrefetcherRocketConfig
+ 1151  cd ../../
+ 1152  source ./env.sh
+ 1153  cd sims/verilator/
+ 1154  clear
+ 1155  make CONFIG=PrefetcherRocketConfig
+ 1156  ls
+ 1157  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../tests/hello.riscv 
+ 1158  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../tests/streaming-passthrough.riscv 
+ 1159  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../tests/gcd.riscv 
+ 1160  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../tests/fft.riscv 
+ 1161  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../generators/rocket-chip/emulator/progs/benchmarks/jacobi1d/jacobi1d.riscv
+ 1162  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../tests/hello.riscv 
+ 1163  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../tests/streaming-passthrough.riscv 
+ 1164  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../tests/fft.riscv 
+ 1165  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../tests/gcd.riscv 
+ 1166  ./simulator-chipyard.harness-ExampleRoccRocketConfig ../../tests/accum.riscv 
+ 1167  ./simulator-chipyard.harness-ExampleRoccRocketConfig ../../tests/accum2.riscv 
+ 1168  ./simulator-chipyard.harness-ExampleRoccRocketConfig ../../tests/accum.riscv 
+ 1169  ./simulator-chipyard.harness-ExampleRoccRocketConfig ../../tests/charcount.riscv 
+ 1170  ./simulator-chipyard.harness-ExampleRoccRocketConfig ../../tests/gcd.riscv 
+ 1171  ./simulator-chipyard.harness-ExampleRoccRocketConfig ../../tests/fft.riscv 
+ 1172  ./simulator-chipyard.harness-ExampleRoccRocketConfig ../../tests/streaming-passthrough.riscv 
+ 1173  ./simulator-chipyard.harness-PrefetcherRocketConfig ../../generators/rocket-chip/emulator/progs/benchmarks/dct/dct.riscv
+ 1174  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1175  source ./env.sh
+ 1176  cd generators/rocket-chip/emulator/progs/benchmarks/dct/
+ 1177  make
+ 1178  cd ../../
+ 1179  cd ../../../
+ 1180  cd ../toolchains
+ 1181  ls
+ 1182  cd libgloss
+ 1183  ls
+ 1184  cd ../../generators/rocket-chip/emulator/progs/benchmarks/dct
+ 1185  make
+ 1186  cd ../..
+ 1187  cd ../../../../toolchains
+ 1188  cd libgloss
+ 1189  ls
+ 1190  ls -l ../../../../toolchains
+ 1191  cd ../../generators/rocket-chip/emulator/progs/benchmarks/dct/
+ 1192  make
+ 1193  make all
+ 1194  make
+ 1195  make all
+ 1196  make
+ 1197  make all
+ 1198  make
+ 1199  make all
+ 1200  make
+ 1201  make all
+ 1202  cd ../../../../../
+ 1203  cd ../tests/
+ 1204  make
+ 1205  make clean
+ 1206  make
+ 1207  cd ../
+ 1208  source ./env.sh
+ 1209  make
+ 1210  cd tests/
+ 1211  make
+ 1212  make clean
+ 1213  make
+ 1214  make clean
+ 1215  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1216  source ./env.sh
+ 1217  cd generators/rocket-chip/emulator/progs/benchmarks/dct/
+ 1218  make
+ 1219  make all
+ 1220  make
+ 1221  make clean
+ 1222  make
+ 1223  make all
+ 1224  make clean
+ 1225  make
+ 1226  make all
+ 1227  make
+ 1228  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1229  source ./env.sh
+ 1230  cd generators/rocket-chip/emulator/progs/
+ 1231  cd dct
+ 1232  cd benchmarks/dct
+ 1233  ls
+ 1234  clear
+ 1235  make
+ 1236  vivado
+ 1237  cd ../../Chipyard/SavvinaThesis/chipyard
+ 1238  source ./env.sh
+ 1239  cd generators/rocket-chip/emulator/progs/benchmarks/bf
+ 1240  cd bfs
+ 1241  cd generators/rocket-chip/emulator/progs/benchmarks/bfs
+ 1242  clear
+ 1243  make clean
+ 1244  make
+ 1245  make clean
+ 1246  make
+ 1247  make clean
+ 1248  make
+ 1249  make clean
+ 1250  make
+ 1251  cd ../jacobi1d/
+ 1252  make clean
+ 1253  make
+ 1254  make clean
+ 1255  make
+ 1256  make clean
+ 1257  make
+ 1258  make clean
+ 1259  make
+ 1260  cd ../../microbenchmarks/
+ 1261  cd IndirectPref/
+ 1262  python deepseek_modify.py Makefile
+ 1263  make
+ 1264  make clean
+ 1265  make
+ 1266  make clean
+ 1267  make
+ 1268  make clean
+ 1269  make
+ 1270  make clean
+ 1271  make
+ 1272  cd ../BoundsCheck/
+ 1273  python deepseek_modify.py Makefile
+ 1274  make
+ 1275  make clean
+ 1276  make
+ 1277  make clean
+ 1278  make
+ 1279  make clean
+ 1280  make
+ 1281  exit
+ 1282  cd ../../Chipyard/SavvinaThesis/chipyard
+ 1283  source ./env.sh
+ 1284  cd generators/rocket-chip/emulator/progs/XMemLib/
+ 1285  make clean
+ 1286  make
+ 1287  exit
+ 1288  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1289  source ./env.sh
+ 1290  cd fpga
+ 1291  make SUB_PROJECT=zcu106 bitstream
+ 1292  vivado
+ 1293  make SUB_PROJECT=savzcu106 bitstream
+ 1294  cd ../
+ 1295  source ./env.sh
+ 1296  cd fpga
+ 1297  make SUB_PROJECT=savzcu106 bitstream
+ 1298  vivado
+ 1299  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1300  source ./env.sh
+ 1301  cd fpga
+ 1302  make SUB_PROJECT=atomzcu106 bitstream
+ 1303  vivado
+ 1304  cd ~
+ 1305  clear
+ 1306  git clone https://github.com/ucb-bar/chipyard.git latest1_13_0
+ 1307  cd Documents/Chipyard/SavvinaThesis/
+ 1308  cd latest1_13_0/
+ 1309  clear
+ 1310  git checkout HEAD
+ 1311  ./build-setup.sh riscv-tools
+ 1312  source ./env.sh
+ 1313  clear
+ 1314  cd sims/verilator
+ 1315  ls
+ 1316  make CONFIG=PrefetcherRocketConfigWithFPU
+ 1317  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1318  source ./env.sh
+ 1319  cd generators/rocket-chip/emulator/progs/benchmarks/jacobi1d/
+ 1320  ls
+ 1321  make clean
+ 1322  ls
+ 1323  make
+ 1324  cd ../../XMemLib/
+ 1325  make clean
+ 1326  ls
+ 1327  make
+ 1328  ls
+ 1329  cd ../benchmarks/jacobi1d/
+ 1330  make clean
+ 1331  ls
+ 1332  make
+ 1333  cd ../../XMemLib/
+ 1334  make clean
+ 1335  ls
+ 1336  make
+ 1337  ls
+ 1338  cd ../benchmarks/jacobi1d/
+ 1339  ls
+ 1340  make clean
+ 1341  ls
+ 1342  make 
+ 1343  cd ../../XMemLib/
+ 1344  make clean
+ 1345  make
+ 1346  ls
+ 1347  cd ../benchmarks/jacobi1d/
+ 1348  make clean
+ 1349  ls
+ 1350  make
+ 1351  cd ../../XMemLib/
+ 1352  ls
+ 1353  make clean
+ 1354  ls
+ 1355  make
+ 1356  ls
+ 1357  cd ../benchmarks/jacobi1d/
+ 1358  ls
+ 1359  make clean
+ 1360  make
+ 1361  clear
+ 1362  cd ../../microbenchmarks/BoundsCheck/
+ 1363  make clean
+ 1364  ls
+ 1365  rm ModifiedMakefile 
+ 1366  ls
+ 1367  python deepseek_modify.py 
+ 1368  ls
+ 1369  make clean
+ 1370  ls
+ 1371  python deepseek_modify.py 
+ 1372  cd ../../
+ 1373  python modify_makefiles.py 
+ 1374  clear
+ 1375  cd XMemLib/
+ 1376  make clean
+ 1377  ls
+ 1378  make clean
+ 1379  make
+ 1380  ls
+ 1381  cd ../
+ 1382  python modify_makefiles.py 
+ 1383  cd microbenchmarks/ArrayBC/
+ 1384  ls
+ 1385  python deepseek2
+ 1386  cd ../../
+ 1387  cd microbenchmarks/ArrayBC/
+ 1388  make
+ 1389  ./scripts/init-submodules-no-riscv-tools.sh
+ 1390  ./scripts/build-toolchains.sh riscv-tools
+ 1391  ./scripts/build-toolchains.sh riscv-tools 2>&1 build-riscv-tools.log
+ 1392  ./scripts/build-toolchains.sh riscv-tools 2>&1 buildriscvtools.log
+ 1393  ./scripts/build-toolchains.sh riscv-tools > buildriscvtools.log
+ 1394  ./scripts/build-toolchains.sh riscv-tools
+ 1395  ./scripts/build-toolchains.sh riscv-tools > logfile4.log
+ 1396  ./scripts/build-toolchains.sh riscv-tools
+ 1397  conda list env
+ 1398  source env.sh 
+ 1399  ./scripts/build-toolchains.sh riscv-tools -s 3
+ 1400  ./scripts/build-toolchains.sh riscv-tools -h
+ 1401  ./scripts/build-toolchains.sh -s 3 riscv-tools
+ 1402  git checkout head
+ 1403  git checkout latest
+ 1404  cd ..
+ 1405  rm -rf imagemaker/
+ 1406  mkdir imagemaker
+ 1407  git clone https://github.com/ucb-bar/chipyard.git imagemaker
+ 1408  cd imagemaker/
+ 1409  ./build-setup.sh riscv-tools -s 6 -s 7 -s 8 -s 9 -s 10
+ 1410  cd software/
+ 1411  cd firemarshal/
+ 1412  git logs
+ 1413  git log
+ 1414  git checkout 5e6fc2e
+ 1415  git checkout 5e5fc2e
+ 1416  ls
+ 1417  ./marshal -v -d install -t protorype boards/prototype/base-workloads/br-base.json 
+ 1418  cd ..
+ 1419  source env.sh 
+ 1420  cd software/firemarshal/
+ 1421  ./marshal -v -d install -t protorype boards/prototype/base-workloads/br-base.json 
+ 1422  ./marshal -v -d install -t boards/prototype/base-workloads/br-base.json 
+ 1423  ./marshal -v -d install boards/prototype/base-workloads/br-base.json 
+ 1424  ./marshal -v -d build br-base.json
+ 1425  ./init-submodules.sh 
+ 1426  ./marshal -v -d build br-base.json
+ 1427  make savedefconfig
+ 1428  make savedefconfig\
+ 1429  ./marshal -v -d build br-base.json
+ 1430  sudo apt install libidn
+ 1431  ./marshal -v -d build br-base.json
+ 1432  source env.sh 
+ 1433  clear
+ 1434  cd software/firemarshal/
+ 1435  ./marshal -v -d build br-base.json
+ 1436  ./marshal -v -d build boards/prototype/base-workloads/br-base.json 
+ 1437  ls
+ 1438  conda list env
+ 1439  ./marshal -v -d build br-base.json 
+ 1440  source env.sh 
+ 1441  cd software/firemarshal/
+ 1442  ./marshal -v -d build br-base.json 
+ 1443  ./marshal -v -d install -t prototype br-base.json
+ 1444  ./marshal -v -d build br-base.json
+ 1445  cd ../../
+ 1446  cd ..
+ 1447  cd latest/
+ 1448  cd software/
+ 1449  cd firemarshal/
+ 1450  source init-submodules.sh 
+ 1451  ./marshal -v -d build br-base.json
+ 1452  conda deactivate
+ 1453  cd ..
+ 1454  conda deactivate
+ 1455  source env.sh 
+ 1456  clear
+ 1457  cd software/fire
+ 1458  cd software/firemarshal/
+ 1459  clear
+ 1460  source init-submodules.sh 
+ 1461  clear
+ 1462  cls
+ 1463  clear
+ 1464  cd ../latest/
+ 1465  source env.sh 
+ 1466  cd software/firemarshal/
+ 1467  source init-submodules.sh 
+ 1468  clear
+ 1469  ./marshal -v -d build br-base.json
+ 1470  ;s
+ 1471  clear
+ 1472  cd ..
+ 1473  cd latest/
+ 1474  cd software/fire
+ 1475  cd software/firemarshal/
+ 1476  ./marshal -v -d build br-base.json
+ 1477  cd ..
+ 1478  source env.sh 
+ 1479  cd software/firemarshal/
+ 1480  ./marshal -v -d build br-base.json
+ 1481  clear
+ 1482  cls
+ 1483  cd ..
+ 1484  mkdir stable
+ 1485  history | grep git 
+ 1486  git clone hhtps://github.com/ucb-bar/chipyard.git stable/
+ 1487  git clone hhtps://github.com/ucb-bar/chipyard.git stable
+ 1488  git clone https://github.com/ucb-bar/chipyard.git stable
+ 1489  cd stable/
+ 1490  git checkout 1.11.0
+ 1491  ./build-setup.sh riscv-tools -s 6 -s 7
+ 1492  /usr/bin/python3 /home/riscv/.vscode-server/extensions/ms-python.python-2025.0.0-linux-x64/python_files/printEnvVariablesToFile.py /home/riscv/.vscode-server/extensions/ms-python.python-2025.0.0-linux-x64/python_files/deactivate/bash/envVars.txt
+ 1493  admin_cheetara
+ 1494  clear
+ 1495  source env.sh 
+ 1496  git log
+ 1497  ./scripts/build-toolchains.sh riscv-tools > output.txt 2>&1
+ 1498  source env.sh 
+ 1499  cd ../../../../
+ 1500  cd ../
+ 1501  cd riscv-gnu-toolchain/installed-tools/bin/
+ 1502  ls
+ 1503  cd ../
+ 1504  source ./env.sh
+ 1505  cd toolchains/riscv-tools/riscv-pk/
+ 1506  ls
+ 1507  cd build
+ 1508  ../configure --prefix=/home/riscv/Documents/Chipyard/SavvinaThesis/riscv-gnu-toolchain/installed-tools/ --host=riscv64-unknown-linux-gnu
+ 1509  make
+ 1510  ../configure --prefix=/home/riscv/Documents/Chipyard/SavvinaThesis/riscv-gnu-toolchain/installed-tools/ --host=riscv64-unknown-linux-gnu
+ 1511  make
+ 1512  source ./env.sh
+ 1513  cd toolchains/
+ 1514  ls
+ 1515  cd riscv-tools_default
+ 1516  cd riscv-isa-sim/
+ 1517  clear
+ 1518  ls
+ 1519  cd build
+ 1520  spike pk ../../../../generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk_zcu.riscv
+ 1521  spike pk ../../../../generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk_zcu_noatom.riscv
+ 1522  spike pk ../../../../generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk.riscv
+ 1523  spike pk ../../../../generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk_noatom.riscv
+ 1524  spike pk ../../../../generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk_zcu_noatom.riscv
+ 1525  spike pk ../../../../generators/rocket-chip/emulator/progs/benchmarks/jacobi1d/jacobi1d.riscv
+ 1526  spike pk ../../../../generators/rocket-chip/emulator/progs/benchmarks/jacobi1d/jacobi1d_atom.riscv
+ 1527  cd ../../
+ 1528  source ./env.sh
+ 1529  clear
+ 1530  cd generators/rocket-chip/emulator/progs/microbenchmarks/
+ 1531  ls
+ 1532  cd Array
+ 1533  ls
+ 1534  clear
+ 1535  python deepseek2.py Makefile
+ 1536  ls
+ 1537  make
+ 1538  ls
+ 1539  make clean
+ 1540  ls
+ 1541  make
+ 1542  ls
+ 1543  clear
+ 1544  cd ../../../../
+ 1545  cd ../../
+ 1546  ls
+ 1547  cd toolchains/riscv-tools/riscv-pk/
+ 1548  cd build
+ 1549  make clean
+ 1550  ../configure --prefix=$RISCV/pk_metasys --host=riscv64-unknown-elf CC=/home/riscv/Documents/Chipyard/SavvinaThesis/riscv-gnu-toolchain/installed-tools/bin/riscv64-unknown-elf-gcc
+ 1551  make
+ 1552  make install
+ 1553  cd ../../
+ 1554  source ./env.sh
+ 1555  cd sims/verilator/
+ 1556  clear
+ 1557  make CONFIG=PrefetcherRocketConfigWithFPU
+ 1558  ls
+ 1559  ./simulator-chipyard.harness-PrefetcherRocketConfigWithFPU /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk.riscv
+ 1560  cd ../../../../
+ 1561  cd ../
+ 1562  ls
+ 1563  zip -r latest1_13_0.zip latest1_13_0
+ 1564  ls
+ 1565  zip -r latest1_13_0_local.zip latest1_13_0
+ 1566  ls
+ 1567  rm -rf riscv-opcodes-default
+ 1568  zip -r mirrorgnu_local.zip mirrorgnu
+ 1569  ls
+ 1570  zip -r chipyard_local.zip chipyard
+ 1571  ls
+ 1572  rm -rf latest1_13_0 latest1_13_0_local.zip 
+ 1573  ls
+ 1574  rm -rf mirrorgnu mirrorgnu_local.zip 
+ 1575  ls
+ 1576  cd ../../
+ 1577  source ./env.sh
+ 1578  cd sims/verilator
+ 1579  ./simulator-chipyard.harness-PrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk_noatom.riscv
+ 1580  ./simulator-chipyard.harness-PrefetcherRocketConfigWithFPU /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/microbenchmarks/Array/stream-pk.riscv
+ 1581  make CONFIG=AtomControllerRocketConfig
+ 1582  ls
+ 1583  make CONFIG=StridePrefetcherRocketConfig
+ 1584  ls
+ 1585  make CONFIG=IndirectPrefetcherRocketConfig
+ 1586  make CONFIG=IndirectPrefetcherStreamOnlyRocketConfig
+ 1587  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1588  source ./env.sh
+ 1589  clear
+ 1590  cd toolchains/riscv-tools_default/
+ 1591  cd build
+ 1592  ls
+ 1593  cd riscv-pk/
+ 1594  cd build/
+ 1595  clear
+ 1596  ../configure --prefix=$RISCV --host=riscv64-unknown-elf
+ 1597  make
+ 1598  sudo make install
+ 1599  make install
+ 1600  cd ../..
+ 1601  cd ../riscv-tools/riscv-pk/
+ 1602  cd build
+ 1603  clear
+ 1604  ../configure --prefix=$RISCV --host=riscv64-unknown-linux-gnu CC=/home/riscv/Documents/Chipyard/SavvinaThesis/riscv-gnu-toolchain/installed-tools/bin/riscv64-unknown-linux-gnu-gcc
+ 1605  make
+ 1606  ../configure --prefix=$RISCV --host=riscv64-unknown-linux-gnu CC=/home/riscv/Documents/Chipyard/SavvinaThesis/riscv-gnu-toolchain/installed-tools/bin/riscv64-unknown-linux-gnu-gcc
+ 1607  make
+ 1608  make install
+ 1609  make clean
+ 1610  make
+ 1611  make clean
+ 1612  ../configure --prefix=$RISCV --host=riscv64-unknown-linux-gnu CC=/home/riscv/Documents/Chipyard/SavvinaThesis/riscv-gnu-toolchain/installed-tools/bin/riscv64-unknown-linux-gnu-gcc
+ 1613  make
+ 1614  make install
+ 1615  cd ../../../../sims/verilator/
+ 1616  clear
+ 1617  ./simulator-chipyard.harness-PrefetcherRocketConfig
+ 1618  ./simulator-chipyard.harness-PrefetcherRocketConfig$RISCV/riscv64-unknown-linux-gnu/bin/pk
+ 1619  ./simulator-chipyard.harness-PrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-linux-gnu/bin/pk
+ 1620  ./simulator-chipyard.harness-PrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-linux-gnu/bin/pk -h
+ 1621  ./simulator-chipyard.harness-ExampleRoccRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-linux-gnu/bin/pk 
+ 1622  ./simulator-chipyard.harness-ExampleRoccRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf/bin/pk 
+ 1623  ./simulator-chipyard.harness-PrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-linux-gnu/bin/pk
+ 1624  cd ../../toolchains/riscv-tools/riscv-isa-sim/
+ 1625  spike /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-linux-gnu/bin/pk
+ 1626  spike
+ 1627  spike /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf/bin/pk
+ 1628  cd ../../
+ 1629  cd ../sims/verilator/
+ 1630  ./simulator-chipyard.harness-PrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf/bin/pk
+ 1631  ./simulator-chipyard.harness-PrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk_zcu.riscv
+ 1632  ./simulator-chipyard.harness-PrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk.riscv
+ 1633  clear
+ 1634  make CONFIG=BoundsCheckerRocketConfig
+ 1635  ls
+ 1636  ./simulator-chipyard.harness-BoundsCheckerRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/microbenchmarks/ArrayBC/stream-pk.riscv
+ 1637  make CONFIG=IndirectPrefetcherBFSRocketConfig
+ 1638  ls
+ 1639  make CONFIG=ALURocketConfig
+ 1640  vivado
+ 1641  vivado
+ 1642  cd ../../
+ 1643  source ./env.sh
+ 1644  cd fpga
+ 1645  clear
+ 1646  make SUB_PROJECT=atomzcu106 bitstream 2>&1 atomzcu106.log
+ 1647  clear
+ 1648  make SUB_PROJECT=strideprefzcu106 bitstream 2>&1 | tee atomzcu106.log
+ 1649  make SUB_PROJECT=stindirectprefzcu106 bitstream 
+ 1650  make SUB_PROJECT=indirectprebfszcu106 bitstream 
+ 1651  vivado
+ 1652  cd ../../Chipyard/SavvinaThesis/chipyard
+ 1653  source ./env.sh
+ 1654  cd fpga
+ 1655  clear
+ 1656  make SUB_PROJECT=indirectprestreamzcu106 bitstream
+ 1657  make SUB_PROJECT=indirectprefzcu106 bitstream
+ 1658  ./build-setup.sh riscv-tools 
+ 1659  source env.sh 
+ 1660  clear
+ 1661  cd software/firemarshal/
+ 1662  ./marshal -v -d build br-base.json
+ 1663  ./marshal -v -d install -t prototype br-base.json
+ 1664  vivado
+ 1665  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1666  source ./env.sh
+ 1667  cd fpga
+ 1668  make SUB_PROJECT=indirectprefzcu106 bitstream
+ 1669  make SUB_PROJECT=boundscheckzcu106 bitstream
+ 1670  exit
+ 1671  cd ../../
+ 1672  source ./env.sh
+ 1673  clear
+ 1674  cd generators/rocket-chip/emulator/progs/
+ 1675  ls
+ 1676  clear
+ 1677  ls
+ 1678  python modify_makefiles.py 
+ 1679  cd ../../
+ 1680  source ./env.sh
+ 1681  cd sims/verilator/
+ 1682  clear
+ 1683  ls
+ 1684  ./simulator-chipyard.harness-IndirectPrefetcherStreamOnlyRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/microbenchmarks/Array/stream-pk.riscv
+ 1685  cd ../../
+ 1686  source ./env.sh
+ 1687  cd sims/verilator
+ 1688  clear
+ 1689  ls
+ 1690  ./simulator-chipyard.harness-StridePrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/benchmarks/floyd/floyd.riscv
+ 1691  cd ../../
+ 1692  source ./env.sh
+ 1693  cd sims/verilator
+ 1694  clear
+ 1695  ls
+ 1696  ./simulator-chipyard.harness-IndirectPrefetcherBFSRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/microbenchmarks/IndirectPref/ind_pref_microbenchmark_noatom.riscv
+ 1697  source ./env.sh
+ 1698  cd sims/verilator
+ 1699  ls
+ 1700  ./simulator-chipyard.harness-IndirectPrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator/progs/microbenchmarks/IndirectPref/ind_pref_microbenchmark_noatom.riscv
+ 1701  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1702  ls
+ 1703  source ./env.sh
+ 1704  cd generators/rocket-chip/emulator/progs/microbenchmarks/IndirectPref/
+ 1705  ls
+ 1706  make clean
+ 1707  make
+ 1708  make clean
+ 1709  make
+ 1710  ls
+ 1711  make clean
+ 1712  ls
+ 1713  make
+ 1714  ls
+ 1715  cd ../../benchmarks/floyd/
+ 1716  ls
+ 1717  make clean
+ 1718  ls
+ 1719  make
+ 1720  ls
+ 1721  cd ../../../../../
+ 1722  cd ../
+ 1723  source ./env.sh
+ 1724  cd generators/rocket-chip/emulator_default/
+ 1725  ls
+ 1726  python modify_makefiles.py 
+ 1727  cd progs
+ 1728  python modify_makefiles.py 
+ 1729  cd bfs
+ 1730  cd benchmarks/bfs
+ 1731  python restore_default.py 
+ 1732  cd ../../
+ 1733  python run_restore_default.py 
+ 1734  python run_modify_makefiles.py 
+ 1735  ./make_benches.sh 
+ 1736  cd ../../../../../
+ 1737  cd ../
+ 1738  source ./env.sh
+ 1739  cd generators/rocket-chip/emulator/progs/benchmarks/bfs
+ 1740  clear
+ 1741  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-PrefetcherRocketConfigWithFPU /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk bfs.riscv graph_input.txt 
+ 1742  make clean
+ 1743  ls
+ 1744  make
+ 1745  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-IndirectPrefetcherRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk bfs.riscv graph_input.txt 
+ 1746  cd ../../../../../
+ 1747  cd ../
+ 1748  source ./env.sh
+ 1749  cd sims/verilator/
+ 1750  clear
+ 1751  make CONFIG=IndirectPrefetcherRocketConfigPerfCount
+ 1752  ls
+ 1753  cd ../../../../../
+ 1754  cd ../
+ 1755  source ./env.sh
+ 1756  cd generators/rocket-chip/emulator/progs/microbenchmarks/IndirectPref/
+ 1757  ls
+ 1758  rm *.riscv *.o
+ 1759  ls
+ 1760  make
+ 1761  ls
+ 1762  make
+ 1763  make clean
+ 1764  ls
+ 1765  make
+ 1766  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-IndirectPrefetcherRocketConfig /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk ind_pref_microbenchmark.riscv 
+ 1767  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-IndirectPrefetcherRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk ind_pref_microbenchmark.riscv 
+ 1768  cd chipyard
+ 1769  source ./env.sh
+ 1770  cd generators/rocket-chip/emulator/progs/benchmarks/bfs
+ 1771  clear
+ 1772  rm *.o *.riscv
+ 1773  ls
+ 1774  make
+ 1775  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-PrefetcherRocketConfig bfs.riscv graph_input.txt 
+ 1776  make clean
+ 1777  ls
+ 1778  make
+ 1779  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-PrefetcherRocketConfigWithFPU bfs.riscv graph_input.txt 
+ 1780  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-IndirectPrefetcherRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk bfs_noatom.riscv graph_input.txt 
+ 1781  cd Documents/Chipyard/SavvinaThesis/
+ 1782  zip -r chipyard_local.zip chipyard
+ 1783  ls
+ 1784  rm -rf chipyard_local.zip 
+ 1785  ls
+ 1786  cd ../../../../
+ 1787  cd ../../
+ 1788  source ./env.sh
+ 1789  cd generators/rocket-chip/emulator/progs/microbenchmarks/
+ 1790  ls
+ 1791  cd ../../
+ 1792  cd ../emulator_default/progs/microbenchmarks/
+ 1793  ls
+ 1794  chmod +x run_verilator.sh 
+ 1795  ./run_verilator.sh 
+ 1796  ls
+ 1797  ./run_verilator.sh 
+ 1798  cd ../../../../../
+ 1799  cd sims/verilator/
+ 1800  clear
+ 1801  make CONFIG=IndirectPrefetcherBFSRocketConfigPerfCount
+ 1802  ls
+ 1803  cd ../../generators/rocket-chip/emulator_default/progs/microbenchmarks/ArrayB
+ 1804  cd ../../generators/rocket-chip/emulator_default/progs/microbenchmarks/ArrayBC
+ 1805  ls
+ 1806  make clean
+ 1807  make
+ 1808  cd ../ArraySim/
+ 1809  ls
+ 1810  make clean
+ 1811  make
+ 1812  cd ../../../../../
+ 1813  cd ../sims/verilator/
+ 1814  ls
+ 1815  rm simulator-chipyard.harness-PrefetcherRocketConfigWithFPUPerfCount 
+ 1816  make CONFIG=PrefetcherRocketConfigWithFPUPerfCount
+ 1817  cd generated-src/
+ 1818  ls
+ 1819  rm -rf chipyard.harness.TestHarness.PrefetcherRocketConfigWithFPUPerfCount/
+ 1820  cd ../
+ 1821  make CONFIG=PrefetcherRocketConfigWithFPUPerfCount
+ 1822  ls
+ 1823  cd ../../../../../../
+ 1824  source ./env.sh
+ 1825  cd sims/verilator/generated-src/
+ 1826  cd ../
+ 1827  clear
+ 1828  make CONFIG=IndirectPrefetcherRocketConfigStreamOnlyPerfCount
+ 1829  make CONFIG=IndirectPrefetcherStreamOnlyRocketConfigPerfCount
+ 1830  ./simulator-chipyard.harness-BoundsCheckerRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator_default/progs/microbenchmarks/ArrayBC/stream-pk.riscv
+ 1831  ./simulator-chipyard.harness-BoundsCheckerRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator_default/progs/microbenchmarks/ArraySim/stream-pk.riscv
+ 1832  which vivado
+ 1833  cd /tools/Xilinx/Vivado/
+ 1834  ls
+ 1835  vivado 2016.2
+ 1836  cd ../../../../../
+ 1837  cd emulator/progs/
+ 1838  cp -r olden ../../chipyard/generators/rocket-chip/emulator_default/
+ 1839  cd ../../chipyard/sims/verilator/
+ 1840  ls
+ 1841  cd ../../
+ 1842  source ./env.sh
+ 1843  cd sims/verilator
+ 1844  clear
+ 1845  make CONFIG=PrefetcherRocketConfigWithFPUPerfCount
+ 1846  make CONFIG=BoundsCheckerRocketConfigPerfCount
+ 1847  ./simulator-chipyard.harness-BoundsCheckerRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator_default/progs/microbenchmarks/ArraySim/stream-pk.riscv
+ 1848  ./simulator-chipyard.harness-BoundsCheckerRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator_default/progs/microbenchmarks/ArrayBC/stream-pk.riscv
+ 1849  ls
+ 1850  cd ../../generators/rocket-chip/emulator_default/progs/benchmarks/
+ 1851  clear
+ 1852  ls
+ 1853  chmod +x run_verilator_benchmarks.sh 
+ 1854  clear
+ 1855  ./run_verilator_benchmarks.sh 
+ 1856  clear
+ 1857  ./run_verilator_benchmarks.sh 
+ 1858  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1859  source ./env.sh
+ 1860  cd generators/rocket-chip/emulator_default/progs/
+ 1861  ./make_benches.sh 
+ 1862  ls
+ 1863  chmod +x delete_stuff.sh 
+ 1864  ./delete_stuff.sh 
+ 1865  ./make_benches.sh 
+ 1866  python run_modify_makefiles.py 
+ 1867  ./make_benches.sh 
+ 1868  cd olden/
+ 1869  ls
+ 1870  cd bh
+ 1871  make
+ 1872  cd ../../microbenchmarks/
+ 1873  clear
+ 1874  ls
+ 1875  ./run_verilator.sh 
+ 1876  ./simulator-chipyard.harness-BoundsCheckerRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators/rocket-chip/emulator_default/progs/microbenchmarks/ArrayBC/stream-pk.riscv
+ 1877  cd ArrayBC/
+ 1878  make clean
+ 1879  make
+ 1880  cd ../RandomAccessBC/
+ 1881  make clean
+ 1882  make
+ 1883  cd ../RandomAccessBCSim/
+ 1884  make clean
+ 1885  make
+ 1886  cd ../
+ 1887  ./run_verilator.sh 
+ 1888  cd ../
+ 1889  clear
+ 1890  ls
+ 1891  ./delete_stuff.sh 
+ 1892  cd microbenchmarks/
+ 1893  clear
+ 1894  ./run_verilator.sh 
+ 1895  clear
+ 1896  ./run_verilator.sh 
+ 1897  clear
+ 1898  ./run_verilator.sh 
+ 1899  cd RandomAccess
+ 1900  ls
+ 1901  make clean
+ 1902  ls
+ 1903  make
+ 1904  make clean
+ 1905  ls
+ 1906  make
+ 1907  ls
+ 1908  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-IndirectPrefetcherRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk random_noatom.riscv 
+ 1909  make clean
+ 1910  ls
+ 1911  make
+ 1912  ls
+ 1913  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-IndirectPrefetcherRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk random_noatom.riscv 
+ 1914  cd ../
+ 1915  ./run_verilator.sh 
+ 1916  vivado
+ 1917  cd ../../../../../
+ 1918  source ./env.sh
+ 1919  cd generators/rocket-chip/emulator_default/progs/microbenchmarks/ArrayB
+ 1920  cd generators/rocket-chip/emulator_default/progs/microbenchmarks/ArrayBC/
+ 1921  la
+ 1922  ls
+ 1923  make clean
+ 1924  make
+ 1925  cd ../Array3DSim
+ 1926  ls
+ 1927  make
+ 1928  cd ../
+ 1929  clear
+ 1930  ./run_verilator.sh 
+ 1931  cd /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard
+ 1932  source ./env.sh
+ 1933  cd generators/rocket-chip/emulator_default/progs/benchmarks/
+ 1934  ls
+ 1935  ./run_verilator_benchmarks.sh 
+ 1936  cd ../../../../../
+ 1937  cd ../source ./env.sh
+ 1938  cd ../
+ 1939  ./source ./env.sh
+ 1940  source ./env.sh
+ 1941  cd generators/rocket-chip/emulator_default/progs/benchmarks/char_radii/
+ 1942  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-PrefetcherRocketConfigWithFPUPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk radii.riscv ../input_graph.txt
+ 1943  cd ../../../../../../
+ 1944  source ./env.sh
+ 1945  cd generators/rocket-chip/emulator_default/progs/benchmarks/
+ 1946  cd ../../../../../../\
+ 1947  cd ../../../../../../
+ 1948  source ./env.sh
+ 1949  cd generators/rocket-chip/emulator_default/progs/microbenchmarks/ArraySim/
+ 1950  ls
+ 1951  make clean
+ 1952  make
+ 1953  ls
+ 1954  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-BoundsCheckerRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk stream-pk_noatom.riscv 
+ 1955  make clean
+ 1956  make
+ 1957  /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/verilator/simulator-chipyard.harness-BoundsCheckerRocketConfigPerfCount /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools/pk_wout_metasys/riscv64-unknown-elf/bin/pk stream-pk_noatom.riscv 
+ 1958  cd ../RandomAccess
+ 1959  ls
+ 1960  make clean
+ 1961  make
+ 1962  make clean
+ 1963  make
+ 1964  cd ../RandomAccessBCSim/
+ 1965  make clean
+ 1966  make
+ 1967  cd ../
+ 1968  ./run_verilator.sh 
+ 1969  clear
+ 1970  ./run_verilator.sh 
+ 1971  cd ../../../../../
+ 1972  source ./env.sh
+ 1973  cd generators/rocket-chip/emulator_default/progs/benchmarks/
+ 1974  clear
+ 1975  ./run_verilator_benchmarks.sh 
+ 1976  vivado
+ 1977  scp -r snastou@coroni.microlab.ntua.gr:/home/snastou/george-repo-metasys/zc706 ./Documents/Chipyard/SavvinaThesis/my-laptop-transfers/george-repo-metasys/.
+ 1978  cd Documents/Chipyard/SavvinaThesis/my-laptop-transfers/george-repo-metasys/zc706/
+ 1979  ls
+ 1980  vivado -mode batch -source ../upgrade_version.tcl -tclargs zc706_rocketchip_PrefetcherZynqFPGAConfig/zc706_rocketchip_PrefetcherZynqFPGAConfig.xpr src/tcl/zc706_bd.tcl
+ 1981  cd ../../Chipyard/SavvinaThesis/my-laptop-transfers/george-repo-metasys/zc706/
+ 1982  vivado -mode batch -source ../upgrade_version.tcl -tclargs zc706_rocketchip_PrefetcherZynqFPGAConfig/zc706_rocketchip_PrefetcherZynqFPGAConfig.xpr src/tcl/zc706_bd.tcl
+ 1983  cd ~
+ 1984  vivado
+ 1985  clear
+ 1986  cd Documents/Chipyard/SavvinaThesis/chipyard
+ 1987  source ./env.sh
+ 1988  cd sims/verilator/
+ 1989  ls
+ 1990  rm simulator-chipyard.harness-PrefetcherRocketConfigWithFPUPerfCount 
+ 1991  make CONFIG=PrefetcherRocketConfigWithFPUPerfCount
+ 1992  ls
+ 1993  cd generated-src/
+ 1994  ls
+ 1995  rm -rf chipyard.harness.TestHarness.PrefetcherRocketConfigWithFPUPerfCount/
+ 1996  ls
+ 1997  cd ../
+ 1998  make CONFIG=PrefetcherRocketConfigWithFPUPerfCount
+ 1999  exit
+ 2000  cd ~
+ 2001  history > my_history.txt

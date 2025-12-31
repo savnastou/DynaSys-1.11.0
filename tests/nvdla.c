@@ -1,8 +1,8 @@
 #include <stdint.h>
-
+#include <stdio.h>
 #include "nvdla.h"
 #include "mmio.h"
-#include <riscv-pk/encoding.h>
+#include </home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/toolchains/riscv-tools/riscv-pk/machine/encoding.h>
 
 #define NVDLA_BASE 0x10040000
 #define reg_write(addr,val) reg_write32(NVDLA_BASE+addr,val)

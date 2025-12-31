@@ -8,7 +8,401 @@ import freechips.rocketchip.subsystem.{InCluster}
 // Rocket Configs
 // --------------
 
+/////////////////////////////////////////Final Configs//////////////////////////////////////////////////////////
+
+
+// Cores only ---------------------------------------------------------------------------------------------------------------------------
+
+// Small -----------------------------------------------
+class CorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// Medium -----------------------------------------------
+class CorrectMedNoBwslowdownFinalExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// Big    -----------------------------------------------
+class CorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// Big    -----------------------------------------------
+// Perf Counters
+class CorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2PERFRocketConfig extends Config(
+  new chipyard.config.WithNPerfCounters(29) ++
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// List Prefetcher + Cores ----------------------------------------------------------------------------------------------------------------
+
+// Small -----------------------------------------------
+// 256 tagIDs
+class ListPref7ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 7, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++  
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++  
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 512
+class ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(512, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 256
+class ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+//-----------------With L2
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameWithL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++  
+  new chipyard.config.AbstractConfig
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 512
+class ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRWithL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(512, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++
+  new chipyard.config.AbstractConfig 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 256
+class ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRWithL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++
+  new chipyard.config.AbstractConfig
+)
+
+//-----------------No RQT
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256InitialNoRqtNoswaitRPTCorrectMedNoBwslowdown1Way1DTLBSet1MSHRExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialNoRqtNoswaitRPTExactlySame39Config(256, 8, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++  
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 512
+class ListPref8ALB5122048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameConfig(512, 8, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 256
+class ListPref8ALB2562048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown1Way1DTLBSet1MSHRNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameConfig(256, 8, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdown1Way1DTLBSet1MSHR(1, 1) ++
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// Medium -----------------------------------------------
+// 256 tagIDs
+// Granul 7
+class ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTExactlySameNoL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 7, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// CORRECTED VERSION
+// Granul 7
+class ListPref7ALB256MAPUPDATEInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherComplete39MAPUPDATEInitialRqtNoswaitRPTExactlySameConfig(256, 7, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// CORRECTED VERSION
+// Granul 6
+class ListPref6ALB256MAPUPDATEInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherComplete39MAPUPDATEInitialRqtNoswaitRPTExactlySameConfig(256, 6, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTExactlySameNoL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 7
+class ListPref7ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(512, 7, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 512
+class ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(512, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 256
+class ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+//-----------------With L2
+
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTExactlySameWithL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfig
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 512
+class ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalWithL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(512, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfig 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 256
+class ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalWithL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfig 
+)
+
+//-----------------No RQT
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256InitialNoRqtNoswaitRPTCorrectMedNoBwslowdownFinalExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialNoRqtNoswaitRPTExactlySame39Config(256, 8, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 512
+class ListPref8ALB5122048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameConfig(512, 8, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 256
+class ListPref8ALB2562048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdownFinalNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameConfig(256, 8, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// Big    -----------------------------------------------
+// 256 tagIDs
+class ListPref7ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 7, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// PERF COUNTERS
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameNoL2PERFRocketConfig extends Config(
+  new chipyard.config.WithNPerfCounters(29) ++
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 512
+class ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(512, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++        // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 256
+class ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++        // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+//-----------------With L2
+
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256InitialRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRExactlySameWithL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++         // single rocket-core
+  new chipyard.config.AbstractConfig 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 512
+class ListPref8ALB5122048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRWithL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(512, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++        // single rocket-core
+  new chipyard.config.AbstractConfig 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 256
+class ListPref8ALB2562048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRWithL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialRqtNoswaitRPTExactlySameConfig(256, 8, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++        // single rocket-core
+  new chipyard.config.AbstractConfig 
+)
+
+//-----------------No RQT
+// 256 tagIDs
+// Granul 8
+class ListPref8ALB256InitialNoRqtNoswaitRPTCorrectMedNoBwslowdown8Way16DTLBSets16MSHRsExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialNoRqtNoswaitRPTExactlySame39Config(256, 8, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 512
+class ListPref8ALB5122048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRsNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameConfig(512, 8, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// 2048 tagIDs
+// Granul 8
+// ALB 256
+class ListPref8ALB2562048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameCorrectMedNoBwslowdown8Way16DTLBSets16MSHRsNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcher2048X11CycleRDLatencyNorenInitialNoRqtNoswaitRPTExactlySameConfig(256, 8, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal8Way16DTLBSets16MSHR(1, 16) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// Only MetaSys Intruction Implementation Module + Cores ----------------------------------------------------------------------------------------------------------
+
+// Medium -----------------------------------------------
+// 2048 tagIDs
+class AtomAddressMapController2048X11CycleRDLatencyNorenCorrectMedNoBwslowdownFinalExactlySameNoL2RocketConfig extends Config(
+  new freechips.rocketchip.subsystem.AtomAddressMapController2048X11CycleRDLatencyNorenSubsystemConfig(7, false, false) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
+
+// INITIAL
+// bring rqt buffer back
+class ListPref6ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitExactlySameNoL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitExactlySame39Config(256, 6, true, false, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+class ListPref6ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitDISABLEPREFExactlySameNoL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitExactlySame39Config(256, 6, false, true, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+class ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPT8xSYSTEMBUSExactlySameNoL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPT8xSYSTEMBUSExactlySame39Config(256, 7, true, false, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+class ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTLOOKUPONLYExactlySameNoL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 7, true, true, false, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+class ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTDISABLEREDUNDCHECKSExactlySameNoL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherCompleteInitialRqtNoswaitRPTExactlySame39Config(256, 7, true, false, true, 4, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+class ListPref7ALB256CorrectMedNoBwslowdownComplete39ExactlySameNoL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherComplete39Config(256, 7, true, false) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+class ListPref7ALB256CorrectMedNoBwslowdownComplete39InitialRqtNoswaitRPTCLOSERTOSLOWExactlySameNoL2FinalRocketConfig extends Config(
+  new freechips.rocketchip.subsystem.ListPrefetcherComplete39InitialRqtNoswaitRPTCLOSERTOSLOWConfig(256, 7, true, false, false, 4) ++  
+  new freechips.rocketchip.subsystem.CorrectWithNMediumCoresNoBwslowdownFinal(1, 2) ++         // single rocket-core
+  new chipyard.config.AbstractConfigNoL2 
+)
+
+/////////////////////////////////////////Existing Configs////////////////////////////////////////////////////
+
 class RocketConfig extends Config(
+  new chipyard.config.WithNPerfCounters(32) ++
+  new freechips.rocketchip.subsystem.WithoutTLMonitors ++ //speedup RTL simulation
   new freechips.rocketchip.subsystem.WithNBigCores(1) ++         // single rocket-core
   new chipyard.config.AbstractConfig)
 

@@ -1,0 +1,78 @@
+Running with RISCV=/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.conda-env/riscv-tools
+echo "Checking all submodules in generators/ are initialized. Uninitialized submodules will be displayed" ; ! git submodule status /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/generators | grep ^-
+Checking all submodules in generators/ are initialized. Uninitialized submodules will be displayed
+mkdir -p /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.classpath_cache/
+cd /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard && java -jar /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/scripts/sbt-launch.jar -Dsbt.ivy.home=/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.ivy2 -Dsbt.global.base=/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.sbt -Dsbt.boot.directory=/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.sbt/boot/ -Dsbt.color=always -Dsbt.supershell=false -Dsbt.server.forcestart=true ";project fpga_platforms; set assembly / assemblyOutputPath := file(\"/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.classpath_cache/chipyard.jar\"); assembly" && touch /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.classpath_cache/chipyard.jar
+Picked up JAVA_TOOL_OPTIONS: -Xmx8G -Xss8M -Djava.io.tmpdir=/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.java_tmp
+[0m[[0m[0minfo[0m] [0m[0mwelcome to sbt 1.8.2 (N/A Java 20.0.2-internal)[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project chipyard-build from plugins.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading project definition from /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/project[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project chipyardRoot from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project testchipip from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project barf from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project constellation from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project icenet from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project hwacha from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project cva6 from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project ibex from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project sodor from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project gemmini from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project tapeout from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project fixedpoint from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project sim-build from plugins.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading project definition from /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/sims/firesim/sim/project[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project firesim from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project targetutils from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mloading settings for project midas from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mresolving key references (41633 settings) ...[0m
+[0m[[0m[0minfo[0m] [0m[0mset current project to chipyardRoot (in build file:/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/)[0m
+[0m[[0m[0minfo[0m] [0m[0mset current project to fpga_platforms (in build file:/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/)[0m
+[0m[[0m[0minfo[0m] [0m[0mDefining assembly / assemblyOutputPath[0m
+[0m[[0m[0minfo[0m] [0m[0mThe new value will be used by assembly[0m
+[0m[[0m[0minfo[0m] [0m[0mReapplying settings...[0m
+[0m[[0m[0minfo[0m] [0m[0mset current project to fpga_platforms (in build file:/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/)[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 4 Scala sources to /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/fpga/fpga-shells/target/scala-2.13/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0mmultiple main classes detected: run 'show discoveredMainClasses' to see the list[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/devices/xilinx/xilinxzcu106mig/XilinxZCU106MIG.scala:18:38: procedure syntax is deprecated for constructors: add `=`, as in method definition[0m
+[0m[[0m[33mwarn[0m] [0m[0m  def this(c : XilinxZCU106MIGParams) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/devices/xilinx/xilinxzcu106mig/XilinxZCU106MIGPeriphery.scala:16:3: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth value mbus in class BaseSubsystem of type freechips.rocketchip.tilelink.TLBusWrapper[0m
+[0m[[0m[31merror[0m] [0m[0mand  value mbus in trait HasMemoryXilinxZCU106MIG of type freechips.rocketchip.tilelink.TLBusWrapper[0m
+[0m[[0m[31merror[0m] [0m[0mmatch expected type ?[0m
+[0m[[0m[31merror[0m] [0m[0m  mbus.coupleTo("xilinxzcu106mig") { xilinxzcu106mig.node := TLWidthWidget(mbus.beatBytes) := _ }[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/devices/xilinx/xilinxzcu106mig/XilinxZCU106MIGPeriphery.scala:16:76: ambiguous reference to overloaded definition,[0m
+[0m[[0m[31merror[0m] [0m[0mboth value mbus in class BaseSubsystem of type freechips.rocketchip.tilelink.TLBusWrapper[0m
+[0m[[0m[31merror[0m] [0m[0mand  value mbus in trait HasMemoryXilinxZCU106MIG of type freechips.rocketchip.tilelink.TLBusWrapper[0m
+[0m[[0m[31merror[0m] [0m[0mmatch expected type ?[0m
+[0m[[0m[31merror[0m] [0m[0m  mbus.coupleTo("xilinxzcu106mig") { xilinxzcu106mig.node := TLWidthWidget(mbus.beatBytes) := _ }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/devices/xilinx/xilinxzcu106mig/XilinxZCU106MIGPeriphery.scala:21:63: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `connectXilinxZCU106MIGToPads`'s return type[0m
+[0m[[0m[33mwarn[0m] [0m[0m  def connectXilinxZCU106MIGToPads(pads: XilinxZCU106MIGPads) {[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/shell/xilinx/ZCU106NewShell.scala:135:42: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method get,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    dclkSource.bundle := shell.ref_clock.get.get.overlayOutput.node.out(0)._1.clock[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                         ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/shell/xilinx/ZCU106NewShell.scala:158:42: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method get,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    dclkSource.bundle := shell.ref_clock.get.get.overlayOutput.node.out(0)._1.clock[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                         ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/shell/xilinx/ZCU106NewShell.scala:322:30: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method get,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    require (shell.sys_clock.get.isDefined, "Use of DDRZCU106Overlay depends on SysClockZCU106Overlay")[0m
+[0m[[0m[33mwarn[0m] [0m[0m                             ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/fpga/fpga-shells/src/main/scala/shell/xilinx/ZCU106NewShell.scala:323:36: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method get,[0m
+[0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val (sys, _) = shell.sys_clock.get.get.overlayOutput.node.out(0)[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                   ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m6 warnings found[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(fpga_shells / Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 4 s, completed Feb 21, 2025, 3:04:43 PM[0m
+[0Jmake: *** [/home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/common.mk:127: /home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/.classpath_cache/chipyard.jar] Error 1

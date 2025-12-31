@@ -1,0 +1,83 @@
+#################################
+# RISCV Toolchain
+#################################
+
+TARGET = riscv64-unknown-elf
+
+#GCC = $(TARGET)-gcc
+GCC = /home/riscv/Documents/Chipyard/SavvinaThesis/riscv-gnu-toolchain/installed-tools/bin/$(TARGET)-gcc
+CXX = /home/riscv/Documents/Chipyard/SavvinaThesis/riscv-gnu-toolchain/installed-tools/bin/$(TARGET)-g++
+CP = $(TARGET)-objcopy
+OBJDUMP = $(TARGET)-objdump
+DG = $(TARGET)-gdb
+SIZE = $(TARGET)-size
+
+#################################
+# Flags
+#################################
+
+# SoC Settings
+ARCH = rv64imafdc
+ABI = lp64d
+ARCHFLAGS = -march=$(ARCH) -mabi=$(ABI)
+
+CFLAGS  = -std=gnu99 -O2 -fno-common -fno-builtin-printf -Wall
+CFLAGS += $(ARCHFLAGS)
+CXXFLAGS = -std=c++11 -O0 -fno-common -fno-builtin-printf -DNOATOM 
+CXXFLAGS += $(ARCHFLAGS)
+LDFLAGS = -static
+
+INCLUDES = -I/util  -I/XMemLib
+LFLAGS = -L/XMemLib
+LIBS = -lXMemLib
+
+include libgloss.mk
+
+PROGRAMS = pwm blkdev accum accum2 charcount nic-loopback big-blkdev pingd \
+           streaming-passthrough streaming-fir nvdla spiflashread spiflashwrite fft gcd \
+           hello mt-hello symmetric
+
+# Add new C++ program
+CPP_PROGRAMS = dct HPC
+
+.DEFAULT_GOAL := default
+
+#################################
+# Build
+#################################
+
+spiflash.img: spiflash.py
+	python3 $<
+
+%.o: %.S
+	$(GCC) $(CFLAGS) -D__ASSEMBLY__=1 -c $< -o $@
+
+%.o: %.c mmio.h spiflash.h
+	$(GCC) $(CFLAGS) -c $< -o $@
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
+
+%.riscv: %.o $(libgloss)
+	$(GCC) $(LDFLAGS) $< -o $@
+
+%.cpp_riscv: %.o $(libgloss)
+	$(CXX) $(LDFLAGS) $(CXXFLAGS) $(INCLUDES) $< $(LFLAGS) $(LIBS) -o $@
+
+%.dump: %.riscv
+	$(OBJDUMP) -D $< > $@
+
+#################################
+# Recipes
+#################################
+
+.PHONY: clean
+delete:
+	rm -f *.riscv *.o *.dump
+	$(if $(libgloss),rm -rf $(libgloss_builddir)/)
+
+.PHONY: default
+default: $(addsuffix .riscv, $(PROGRAMS)) $(addsuffix .cpp_riscv, $(CPP_PROGRAMS)) spiflash.img
+
+.PHONY: dumps
+dumps: $(addsuffix .dump, $(PROGRAMS))

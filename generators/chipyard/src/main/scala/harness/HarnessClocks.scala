@@ -44,20 +44,19 @@ class ClockSourceAtFreqMHz(val freqMHz: Double) extends BlackBox(Map(
   val io = IO(new ClockSourceIO)
   val moduleName = this.getClass.getSimpleName
 
+// timeunit 1ns/1ps;
   setInline(s"$moduleName.v",
     s"""
       |module $moduleName #(parameter PERIOD="") (
       |    input power,
       |    input gate,
       |    output clk);
-      |  timeunit 1ns/1ps;
       |  reg clk_i = 1'b0;
       |  always #(PERIOD/2.0) clk_i = ~clk_i & (power & ~gate);
       |  assign clk = clk_i;
       |endmodule
       |""".stripMargin)
 }
-
 
 // The AbsoluteFreqHarnessClockInstantiator uses a Verilog blackbox to
 // provide the precise requested frequency.

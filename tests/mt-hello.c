@@ -1,6 +1,7 @@
-#include <riscv-pk/encoding.h>
-#include <stdio.h>
+#include </home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/toolchains/riscv-tools/riscv-pk/machine/encoding.h>
 #include "marchid.h"
+#include <stddef.h>
+#include <stdio.h>
 
 // EDIT THIS
 static size_t n_cores = 4;

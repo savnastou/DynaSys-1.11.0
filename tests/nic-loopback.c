@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include <riscv-pk/encoding.h>
+#include </home/riscv/Documents/Chipyard/SavvinaThesis/chipyard/toolchains/riscv-tools/riscv-pk/machine/encoding.h>
 #include "nic.h"
 
 #define NPACKETS 10
