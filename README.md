@@ -1,3 +1,50 @@
+Installation guidelines: https://chipyard.readthedocs.io/en/stable/Chipyard-Basics/Initial-Repo-Setup.html#initial-repository-setup
+
+Before running ``` ./build-setup.sh riscv-tools ```, execute the following commands:
+
+```
+# 1. Create and activate a temporary setup environment
+conda create -n cy-setup python=3.11
+conda activate cy-setup
+
+# 2. Install the required legacy conda-lock version
+conda install -c conda-forge conda-lock=1.4.0
+
+# 3. Force install an older version of setuptools IN THIS environment
+conda install "setuptools<70"
+
+# 4. Run the setup script (it will use the compatible conda-lock from this env) 
+./build-setup.sh riscv-tools -s 9
+```
+
+Observe that in step 4, we skip *Step 9: Pre-compiling FireMarshal default buildroot Linux sources*, as there is an error and we don't need FireMarshal for DynaSys
+
+#### Extras
+
+* To check if conda-lock is installed, run:
+
+```
+conda list -n cy-setup | grep conda-lock
+which conda-lock
+```
+
+* To verify conda-lock actually runs:
+
+conda run -n cy-setup conda-lock --version
+
+* To verify the libmamba solver is present:
+
+```
+conda config --show solver
+```
+
+If it's not, run:
+
+```
+conda install -n cy-setup conda-libmamba-solver
+conda config --set solver libmamba
+```
+
 ![CHIPYARD](https://github.com/ucb-bar/chipyard/raw/main/docs/_static/images/chipyard-logo-full.png)
 
 # Chipyard Framework [![Test](https://github.com/ucb-bar/chipyard/actions/workflows/chipyard-run-tests.yml/badge.svg)](https://github.com/ucb-bar/chipyard/actions)
