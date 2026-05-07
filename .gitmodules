@@ -148,3 +148,7 @@
 [submodule "generators/rocket-chip-inclusive-cache"]
 	path = generators/rocket-chip-inclusive-cache
 	url = https://github.com/chipsalliance/rocket-chip-inclusive-cache.git
+[submodule "generators/rocket-chip"]
+	path = generators/rocket-chip
+	url = https://github.com/savnastou/rocket-chip.git
+	branch = savvina-changes
