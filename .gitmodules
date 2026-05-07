@@ -64,9 +64,6 @@
 [submodule "generators/riscv-sodor"]
 	path = generators/riscv-sodor
 	url = https://github.com/ucb-bar/riscv-sodor.git
-[submodule "fpga/fpga-shells"]
-	path = fpga/fpga-shells
-	url = https://github.com/chipsalliance/rocket-chip-fpga-shells.git
 [submodule "tools/rocket-dsp-utils"]
 	path = tools/rocket-dsp-utils
 	url = https://github.com/ucb-bar/rocket-dsp-utils
@@ -152,3 +149,6 @@
 	path = generators/rocket-chip
 	url = https://github.com/savnastou/rocket-chip.git
 	branch = savvina-changes
+[submodule "fpga/fpga-shells"]
+	path = fpga/fpga-shells
+	url = https://github.com/savnastou/my-fork-fpga-shells.git
